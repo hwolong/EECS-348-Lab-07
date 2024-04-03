@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function enterPasswords() {
+                var pass1 = document.getElementById("password1").value;
+                var pass2 = document.getElementById("password2").value;
+                if (pass1.length < 8 || pass2.length < 8) {
+                    window.alert("Password(s) too short!");
+                } else {
+                    if (pass1 == pass2) {
+                        document.getElementById("passResponse") += "Passwords match!";
+                    } else {
+                        document.getElementById("passResponse") += '<p id="passResponse">Passwords do not match.</p>';
+                    }
+                }
+            }
+        </script>
+        <div>
+            <p>Password 1:</p>
+            <input type="password" id="password1">
+            <p>Password 2:</p>
+            <input type="password" id="password2">
+            <br>
+            <br>
+            <button onclick="enterPasswords()">Enter passwords</button>
+            <p id="passResponse"></p>
+        </div>
+    </body>
+</html>
