@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>
+            <?php
+                $i = 15;
+                echo "<b>x</b>&ensp;&ensp;&emsp;|&emsp;";
+                for ($j = 1; $j <= $i; $j++) {
+                    if ($j < 10) {
+                        echo "<b>" . $j . "</b>" . '&ensp;&ensp;' . '&emsp;' . "|" . '&emsp;';
+                    } else if ($j < 100) {
+                        echo "<b>" . $j . "</b>" . '&ensp;' . '&emsp;' . "|" . '&emsp;';
+                    } else {
+                        echo "<b>" . $j . "</b>" . '&emsp;' . "|" . '&emsp;';
+                    }
+                }
+                echo "<br>";
+                for ($j = 1; $j <= $i; $j++) {
+                    if ($j < 10) {
+                        echo "<b>" . $j . "</b>" . '&ensp;&ensp;' . '&emsp;' . "|" . '&emsp;';
+                    } else if ($j < 100) {
+                        echo "<b>" . $j . "</b>" . '&ensp;' . '&emsp;' . "|" . '&emsp;';
+                    } else {
+                        echo "<b>" . $j . "</b>" . '&emsp;' . "|" . '&emsp;';
+                    }
+                    for ($k = 1; $k <= $i; $k++) {
+                        if (($k * $j) < 10) {
+                            echo $k * $j . '&ensp;&ensp;' . '&emsp;' . "|" . '&emsp;';
+                        } else if (($k * $j) < 100) {
+                            echo $k * $j . '&ensp;' . '&emsp;' . "|" . '&emsp;';
+                        } else {
+                            echo $k * $j . '&emsp;' . "|" . '&emsp;';
+                        }
+                    }
+                    echo "<br>";
+                }
+            ?>
+        </p>
+    </body>
+</html>
